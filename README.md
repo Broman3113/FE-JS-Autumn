@@ -1,3 +1,3 @@
 # FE-JS-Autumn
-# Nix Homeworks
+* Nix Homeworks
 [Lessons menu](https://broman3113.github.io/FE-JS-Autumn/)
