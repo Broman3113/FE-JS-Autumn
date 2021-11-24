@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Размеры. Граница. Таблицы</title>
+    <meta charset="utf-8" />
+    <style>
+        table {
+            border-spacing: 0;
+        }
+        td{
+            width: 50px;
+            height: 50px;
+        }
+        td:nth-child(1){
+            background-color: blue;
+        }
+        td:nth-child(2){
+            background-color: red;
+        }
+        .first{
+            border-radius: 50% 50% 0 0;
+        }
+        .second{
+            border-radius: 50% 0 0 0;
+        }
+        .third, .ninth {
+            background-color: red;
+            border-radius: 0 50% 50% 0;
+        }
+        .six{
+            background-color: blue;
+            border-radius: 50%;
+        }
+        .seventh{
+            border-radius: 0 0 50% 50%;
+        }
+        .eights{
+            border-radius: 0 0 0 50%;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td class="first"></td>
+        <td class="second"></td>
+        <td class="third"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td class="six"></td>
+    </tr>
+    <tr>
+        <td class="seventh"></td>
+        <td class="eights"></td>
+        <td class="ninth"></td>
+    </tr>
+</table>
+</body>
+</html>
