@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>Вложенные плавающие блоки</title>
+    <meta charset="utf-8"/>
+    <style>
+        body{
+            color: white;
+        }
+        .one {
+            float: left;
+            width: 20%;
+        }
+        .two {
+            float: left;
+            width: 80%;
+        }
+        .two > div {
+            float: right;
+        }
+        .three{
+            width: 25%;
+        }
+        .four{
+            width: 75%;
+        }
+        .six, .seven{
+            float: left;
+            width: 33.3%;
+        }
+        .five{
+            float: right;
+            width: 33.3%;
+        }
+    </style>
+</head>
+<body>
+<div class="one" style="background-color: #F00;">1</div>
+<div class="two" style="background-color: #0F0;">
+    <div class="three" style="background-color: #00F;">2</div>
+    <div class="four" style="background-color: #000;">
+        <div class="five" style="background-color: #F0F;">3</div>
+        <div class="six" style="background-color: #0FF;">3<br/>3</div>
+        <div class="seven" style="background-color: #FF0;">3<br/>3<br/>3</div>
+    </div>
+</div>
+</body>
+</html>

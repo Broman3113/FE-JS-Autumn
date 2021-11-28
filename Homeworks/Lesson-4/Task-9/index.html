@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>Позиционирование</title>
+    <meta charset="utf-8"/>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+        .second > ul {
+            width: 100px;
+            display: none;
+            background-color: red;
+        }
+
+        .second:hover .level2{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<ul>
+    <li>Уровень 1</li>
+    <li class="second">
+        Уровень 1
+        <ul class="level2">
+            <li>Уровень 2</li>
+            <li>Уровень 2</li>
+        </ul>
+    </li>
+    <li>Уровень 1</li>
+</ul>
+</body>
+</html>

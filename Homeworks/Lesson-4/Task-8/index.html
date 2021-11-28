@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>Позиционирование</title>
+    <meta charset="utf-8" />
+    <style>
+        body{
+            margin: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            color: #fff;
+            position: absolute;
+        }
+        div:nth-child(1){
+            background-color: red;
+            top: 100px;
+            left: 100px;
+        }
+        div:nth-child(2){
+            background-color: green;
+        }
+        div:nth-child(3){
+            background-color: blue;
+            left: 100px;
+        }
+        div:nth-child(4){
+            background-color: black;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+</body>
+</html>

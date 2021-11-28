@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>Выравнивание колонок по высоте</title>
+    <meta charset="utf-8" />
+    <style>
+        .one{
+            background-color: red;
+            display: flex;
+            justify-content: space-between;
+        }
+        .one > div{
+            width: 33.3%;
+        }
+        .one > div:nth-child(2){
+            order: 3;
+        }
+        .one > div:nth-child(3){
+            background-color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+<div class="one">
+    <div>1</div>
+    <div>2<br />2</div>
+    <div>3<br />3<br />3</div>
+</div>
+</body>
+</html>

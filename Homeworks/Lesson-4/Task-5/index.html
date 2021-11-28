@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>Свойство display</title>
+    <meta charset="utf-8"/>
+    <style>
+        span, div div {
+            border: solid 2px black;
+            width: 50px;
+            height: 50px;
+        }
+
+        body > div {
+            display: list-item;
+            list-style-type: upper-latin;
+            margin-left: 20px;
+        }
+        .block{
+            display: block;
+        }
+        .inline{
+            display: inline;
+        }
+        .inline-block{
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <span>Текст</span>
+    <span class="block">Текст</span>
+    <span>Текст</span>
+</div>
+<div>
+    <div>Текст</div>
+    <div class="inline">Текст</div>
+    <div>Текст</div>
+</div>
+<div>
+    <span>Текст</span>
+    <span class="inline-block">Текст</span>
+    <span>Текст</span>
+</div>
+
+</body>
+</html>
