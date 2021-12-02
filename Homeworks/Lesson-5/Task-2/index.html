@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Адаптивный дизайн</title>
+    <meta charset="utf-8" />
+    <style>
+        div {
+            border: 1px solid black;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container > .item:first-child, .container > .item:last-child{
+            width: 100%;
+        }
+        .wrapper{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+
+        }
+        .wrapper > .item {
+            flex-basis: 200px;
+        }
+        .wrapper > .item:nth-child(1) {
+            order: 1;
+        }
+        .wrapper > .item:nth-child(2) {
+            order: 3;
+        }
+        .wrapper > .item:nth-child(3) {
+            flex-grow: 1;
+            max-width: 600px;
+            order: 2;
+        }
+        @media (max-width: 768px) {
+            .container, .wrapper {
+                display: block;
+            }
+            .wrapper > .item:nth-child(3) {
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="item">100% – 100% – 100%</div>
+    <div class="wrapper">
+        <div class="item">100% – 25% – 20%</div>
+        <div class="item">100% – 25% – 20%</div>
+        <div class="item">100% – 50% – 50%</div>
+    </div>
+    <div class="item">100% – 100% – 100%</div>
+</div>
+</body>
+</html>

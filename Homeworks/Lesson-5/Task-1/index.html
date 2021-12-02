@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <title>Управление элементами</title>
+    <meta charset="utf-8" />
+    <style>
+        div {
+            padding: 5px;
+            border: 2px solid black;
+            margin: 5px;
+        }
+        .flex-container{
+            display: flex;
+            width: 600px;
+        }
+        .item {
+            flex-basis: 100px;
+        }
+        .item:nth-child(2n) {
+            flex-shrink: 5;
+        }
+        .item:nth-child(3), .item:nth-child(4){
+            flex-grow: 2;
+        }
+
+    </style>
+</head>
+<body>
+<div class="flex-container">
+    <div class="item">Flex item 1</div>
+    <div class="item">Flex item 2</div>
+    <div class="item">Flex item 3</div>
+    <div class="item">Flex item 4</div>
+</div>
+</body>
+</html>

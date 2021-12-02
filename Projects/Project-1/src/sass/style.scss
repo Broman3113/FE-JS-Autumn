@@ -1,0 +1,153 @@
+@import 'normalize.scss';
+@import "components/buttons";
+@import "pages/categories";
+@font-face {
+  font-family: 'diploma';
+  src: url('../assets/fonts/diploma.ttf');
+}
+@font-face {
+  font-family: 'pricedown';
+  src: url('../assets/fonts/pricedown.otf');
+}
+@font-face {
+  font-family: 'bankgothic';
+  src: url('../assets/fonts/BankGothic.ttf');
+}
+
+body {
+  font-size: 28px;
+  font-family: 'diploma', 'sans-serif';
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  .nav {
+    z-index: 3;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #000;
+    min-height: 110px;
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      .logo {
+        img {
+          width: 100px;
+        }
+      }
+    }
+
+    &-menu {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+
+      li {
+        list-style-type: none;
+        margin: 0 2vw;
+
+        a {
+          color: #fff;
+          padding: 5px;
+          &:hover{
+            cursor:url("../assets/cursor/bigsmoke.png") , pointer!important
+          }
+        }
+      }
+    }
+  }
+
+  .hero {
+    position: relative;
+    padding-bottom: 30px;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .3);
+      z-index: 1;
+    }
+    display: flex;
+    margin-top: 110px;
+    min-height: 70vh;
+    align-items: center;
+    background: url("../assets/hero/herobg.jpg") top right fixed;
+
+    &-wrapper {
+      z-index: 2;
+      color: #fff;
+      h1 {
+        font-family: "pricedown", "sans-serif";
+      }
+      p{
+        width: 70%;
+        font-family: "bankgothic", "sans-serif";
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.about {
+  text-align: center;
+
+  &-description {
+    line-height: 2.5rem;
+  }
+  .benefits-cards{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 60px 0;
+    &-card{
+      flex-basis: 300px;
+      img{
+        width: 100px;
+      }
+      h3{
+      }
+      p{
+      }
+    }
+  }
+}
+
+footer{
+  text-align: center;
+  background: #000;
+  height: 100px;
+  a{
+    color: #fff;
+    line-height: 100px;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero{
+    text-align: center;
+  }
+  header .hero-wrapper {
+    h1{
+      margin-top: 25%;
+    }
+    p {
+      width: auto;
+    }
+  }
+}
