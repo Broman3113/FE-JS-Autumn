@@ -1,7 +1,43 @@
-header{
-
+body {
+  background: #000 url("../../assets/categories/bg.png") top 110px right fixed;
 }
-.categories-main{
+
+main {
   height: 100vh;
-  background: url("../../assets/categories/bg.png") top right fixed;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  &-list {
+    font-family: bankgothic, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: .1em;
+    line-height: 2.7rem;
+    list-style-type: none;
+    padding: 0;
+    li {
+      a {
+        color: #8cb4ce;
+        text-transform: uppercase;
+      }
+
+      &:hover:before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        height: 45px;
+        width: 45px;
+        background-image: url('../../assets/categories/gta-list-image.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-left: -50px;
+        //list-style-image: url(../../assets/categories/gta-list-image.png);
+      }
+    }
+  }
 }

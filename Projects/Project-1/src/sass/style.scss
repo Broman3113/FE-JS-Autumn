@@ -1,6 +1,6 @@
 @import 'normalize.scss';
 @import "components/buttons";
-@import "pages/categories";
+@import "components/hr";
 @font-face {
   font-family: 'diploma';
   src: url('../assets/fonts/diploma.ttf');
@@ -149,5 +149,8 @@ footer{
     p {
       width: auto;
     }
+  }
+  footer{
+    font-size: 20px;
   }
 }
