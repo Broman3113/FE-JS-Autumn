@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+
+    // Task 1
+    // let camelize = (str) => {
+    //     let res = str.split("-");
+    //     let words = "";
+    //     for(let i = 1; i < res.length; i++) {
+    //          words += res[i][0].toUpperCase() + res[i].slice(1);
+    //     }
+    //     return res[0] + words;
+    // };
+    // console.log(camelize("background-color"));
+    // console.log(camelize("list-style-image"));
+    // console.log(camelize("-webkit-transition"));
+
+    // Task 2
+    // let filterRange = (arr, a, b) => arr.map(item => (item >= Math.min(a ,b) && item <= Math.max(a ,b) ? item : "")).filter(item => item !== "");
+    // let arr = [5, 3, 8, 1];
+    // let filtered = filterRange(arr, 1, 4);
+    // alert( filtered ); // 3,1 (совпадающие значения)
+    // alert( arr ); // 5,3,8,1 (без изменений)
+
+    // Task 3
+    // let filterRangeInPlace = (arr1, a, b) => arr = arr1.map(item => (item >= Math.min(a ,b) && item <= Math.max(a ,b) ? item : "")).filter(item => item !== "");
+    // let arr = [5, 3, 8, 1];
+    // filterRangeInPlace(arr, 1, 4); // удалены числа вне диапазона 1..4
+    // alert( arr ); // [3, 1]
+
+    // Task 4
+    // let arr = [5, 2, 1, -10, 8];
+    // arr.sort((a, b) => b - a);
+    // alert(arr);
+
+    // Task 5
+    // let copySorted = arr => arr.slice().sort();
+    // let arr = ["HTML", "JavaScript", "CSS"];
+    // let sorted = copySorted(arr);
+    // alert( sorted ); // CSS, HTML, JavaScript
+    // alert( arr ); // HTML, JavaScript, CSS (без изменений)
+
+    // Task 6
+    // let calculator = () => {
+    //     let res = prompt("Enter equation: ", "3*3").split("");
+    //     switch (res[1]) {
+    //         case "+":
+    //             return +res[0] + +res[2];
+    //         case "-":
+    //             return +res[0] - +res[2];
+    //         case "*":
+    //             return +res[0] * +res[2];
+    //         case "/":
+    //             return +res[0] / +res[2];
+    //     }
+    // }
+    // console.log(calculator());
+
+    // Task 7
+    // let vasya = { name: "Вася", age: 25 };
+    // let petya = { name: "Петя", age: 30 };
+    // let masha = { name: "Маша", age: 28 };
+    // let users = [ vasya, petya, masha ], names = [];
+    // users.forEach(item => {
+    //     names.push(item.name);
+    // })
+    // alert( names ); // Вася, Петя, Маша
+
+    // Task 8
+    // let sortByAge = (users) => users.sort((a, b) => a.age - b.age);
+    // let vasya = { name: "Вася", age: 25 };
+    // let petya = { name: "Петя", age: 30 };
+    // let masha = { name: "Маша", age: 28 };
+    //
+    // let arr = [ vasya, petya, masha ];
+    //
+    // sortByAge(arr);
+    //
+    // // теперь: [vasya, masha, petya]
+    // alert(arr[0].name); // Вася
+    // alert(arr[1].name); // Маша
+    // alert(arr[2].name); // Петя
+
+    // Task 9
+    // let getAverageAge = (users) => {
+    //     let res = 0;
+    //     users.forEach(item => res += item.age);
+    //     return res / users.length;
+    // };
+    // let vasya = { name: "Вася", age: 25 };
+    // let petya = { name: "Петя", age: 30 };
+    // let masha = { name: "Маша", age: 29 };
+    // let arr = [ vasya, petya, masha ];
+    // alert( getAverageAge(arr) ); // (25 + 30 + 29) / 3 = 28
+
+    // Task 10
+    // let unique = (arr) => arr.filter((item, pos) => arr.indexOf(item) === pos);
+    // let strings = ["кришна", "кришна", "харе", "харе",
+    //     "харе", "харе", "кришна", "кришна", ":-O"
+    // ];
+    // alert(unique(strings)); // кришна, харе, :-O
+
+    // Task 11
+    // let unique = (values) => [...new Set(values)];
+    // let values = ["Hare", "Krishna", "Hare", "Krishna",
+    //     "Krishna", "Krishna", "Hare", "Hare", ":-O"
+    // ];
+    // alert( unique(values) ); // Hare,Krishna,:-O
+
+
+    // Another variant
+
+    // function unique(arr) {
+    //     let res = new Set();
+    //     arr.forEach(item => res.add(item));
+    //     return [...res].join(", ");
+    // }
+    // let strings = ["кришна", "кришна", "харе", "харе",
+    //     "харе", "харе", "кришна", "кришна", ":-O"
+    // ];
+    // alert( unique(strings) ); // кришна, харе, :-O
+    // alert(strings);
+
+    // Task 12
+    // let map = new Map();
+    // map.set("name", "John");
+    // // let keys = [...map.keys()];
+    // let keys = new Array(...map.keys());
+    // // Error: keys.push is not a function
+    // // Ошибка: keys.push -- это не функция
+    // keys.push("more");
+    // console.log(keys);
+
+    // map.keys() возвращает итерируемый объект, а не массив, поэтому используем spread оператор, либо Array.from
+
+    // Task 13
+    // function makeCounter() {
+    //     let count = 0;
+    //     return function() {
+    //         return count++;
+    //     };
+    // }
+    // let counter = makeCounter();
+    // let counter2 = makeCounter();
+    // alert( counter() ); // 0
+    // alert( counter() ); // 1
+    // alert( counter2() ); // 1
+    // alert( counter2() ); // 2
+    // counter и counter2 созданы разными вызовами makeCounter, у каждого свой собственный count.
+
+    // Task 14
+    // function Counter() {
+    //     let count = 0;
+    //     this.up = function() {
+    //         return ++count;
+    //     };
+    //     this.down = function() {
+    //         return --count;
+    //
+    //     };
+    // }
+    // let counter = new Counter();
+    // alert( counter.up() ); // 1
+    // alert( counter.up() ); // 2
+    // alert( counter.down() ); // 1
+    // Будет
+
+    // Task 15
+    // let factorial = (n) => ((n === 0 || n === 1)) ? 1 : n * factorial(n - 1);
+    // console.log(factorial(5));
+
+</script>
+</body>
+</html>
