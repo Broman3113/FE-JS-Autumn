@@ -1,0 +1,58 @@
+@import 'normalize';
+
+body{
+  max-height: 100vh;
+  padding-top: 10vh;
+}
+
+.random{
+  span{
+    padding: 0 7px;
+
+  }
+  width: 170px;
+  margin: 0 auto;
+  border: 1px solid #ccf;
+  &-title{
+    display: block;
+    background: #ccf;
+    text-align: center;
+  }
+  &-min, &-max, &-number{
+    margin: 4px 0;
+    display: flex;
+    label{
+      width: 50px;
+    }
+    input{
+      width: 50%;
+      height: 13px;
+    }
+  }
+  &-fair{
+    display: block;
+    input {
+      margin-left: 10px;
+    }
+  }
+  &-submit{
+    display: block;
+    padding: 5px 0;
+    button{
+      margin: 4px 0;
+      padding: 0 5px;
+    }
+  }
+  &-result{
+    display: block;
+    background: #ccf;
+    text-align: center;
+    &:hover{
+
+    }
+    h3{
+      margin: 0;
+      overflow-wrap: break-word;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+<div class="random">
+    <span class="random-title">True Random Number Generator</span>
+    <span class="random-min"><label for="min">Min: </label><input type="number" id="min" name="min" value="1"></span>
+    <span class="random-max"><label for="max">Max: </label><input type="number" id="max" name="max" value="10"></span>
+    <span class="random-number"><label for="num">Num: </label><input type="number" id="num" name="num" value="5"></span>
+    <span class="random-fair"><label for="fair-random">Fair random</label><input type="checkbox" id="fair-random"></span>
+    <span class="random-submit"><button type="submit" id="submit">Generate</button></span>
+    <span>Result:</span>
+    <span class="random-result">
+        <h3 id="result" title="Click to copy"></h3>
+        <span class="random-result-min"></span>
+        <span class="random-result-max"></span>
+        <span class="random-result-num"></span>
+    </span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
