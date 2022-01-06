@@ -339,6 +339,8 @@ body {
     display: block;
     background: #ccf;
     text-align: center; }
-    .random-result h3 {
-      margin: 0;
-      overflow-wrap: break-word; }
+    .random-result #result {
+      overflow-wrap: break-word;
+      font-size: 1.3rem;
+      display: block;
+      font-weight: bold; }

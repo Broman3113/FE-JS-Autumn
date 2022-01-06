@@ -31,6 +31,7 @@ addEventListener("DOMContentLoaded", () => {
         minResult.innerText = `Min: ${minValue.value}`;
         maxResult.innerText = `Max: ${maxValue.value}`;
         numResult.innerText = `Num: ${numValue.value}`;
+
     });
     result.onclick = function () {
         document.execCommand("copy");

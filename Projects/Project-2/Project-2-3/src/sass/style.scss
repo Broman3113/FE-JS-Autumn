@@ -47,12 +47,12 @@ body{
     display: block;
     background: #ccf;
     text-align: center;
-    &:hover{
 
-    }
-    h3{
-      margin: 0;
+    #result{
       overflow-wrap: break-word;
+      font-size: 1.3rem;
+      display: block;
+      font-weight: bold;
     }
   }
 }
