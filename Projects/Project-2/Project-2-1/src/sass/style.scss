@@ -1,0 +1,217 @@
+@import 'normalize';
+@import 'components/glassPanel';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: url(../assets/bg.jpg) center top;
+  background-size: cover;
+  height: 100vh;
+  font-size: 1.3rem;
+}
+
+main {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .question {
+    min-height: 200px;
+    text-align: center;
+    margin-top: 50px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &-bar {
+      height: 50%;
+
+      span {
+        display: inline-block;
+        background: rgb(0, 95, 245);
+        background: linear-gradient(140deg, rgba(0, 95, 245, 1) 0%, rgba(68, 11, 159, 1) 74%);
+        width: 70%;
+        padding: 10px;
+        border-radius: 50px;
+        -webkit-box-shadow: 0 0 24px 5px rgba(0, 0, 0, 0.47);
+        -moz-box-shadow: 0 0 24px 5px rgba(0, 0, 0, 0.47);
+        box-shadow: 0 0 24px 5px rgba(0, 0, 0, 0.47);
+      }
+    }
+
+    &-answers {
+      height: 55%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-bottom: 15px;
+
+      div {
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 50px;
+        background: linear-gradient(140deg, rgba(0, 95, 245, 1) 0%, rgba(68, 11, 159, 1) 74%);
+        -webkit-box-shadow: 0 0 24px 5px rgba(0, 0, 0, 0.47);
+        -moz-box-shadow: 0 0 24px 5px rgba(0, 0, 0, 0.47);
+        box-shadow: 0 0 24px 5px rgba(0, 0, 0, 0.47);
+
+        button {
+          width: 50%;
+          background: transparent;
+          border: 0;
+          color: #fff;
+
+          &:hover {
+            background: #e1812c;
+          }
+
+          &:active {
+            background: #3ee17f;
+          }
+
+          &:nth-child(1) {
+            border-radius: 50px 0 0 0;
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+          }
+
+          &:nth-child(2) {
+            border-radius: 0 50px 0 0;
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+          }
+
+          &:nth-child(3) {
+            border-radius: 0 0 0 50px;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-right: 1px solid rgba(255, 255, 255, 0.5);
+          }
+
+          &:nth-child(4) {
+            border-radius: 0 0 50px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+  }
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.prize {
+  width: 225px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  &-list, &-count {
+    margin: 0;
+    font-weight: 500;
+    text-align: right;
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      color: gold;
+      letter-spacing: 2px;
+      span {
+        display: inline-block;
+        color: #fff;
+        width: 20px;
+        text-align: center;
+      }
+    }
+
+  }
+
+  &-count {
+    width: 25%;
+
+    .active {
+      background: #005FF5;
+    }
+  }
+
+  &-list {
+    width: 75%;
+
+    li {
+      padding-right: 7px;
+    }
+
+    .active {
+      background: #005FF5;
+    }
+  }
+}
+.tools{
+  .currentPrize{
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 1.7rem;
+  }
+  &-buttons-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin: 0 auto;
+    button{
+      background: #1f8484;
+      width: 50px;
+      border-radius: 10px;
+      margin: 0 10px;
+      border: 3px solid white;
+      padding: 3px;
+      &.withdraw{
+        flex-grow: 3;
+      }
+      &:hover{
+        background: darken(#1f8484, 10%);
+      }
+      &:active{
+        background: darken(#1f8484, 15%);
+      }
+      &.used{
+        background: #3e3e3e;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  main {
+    font-size: 1.1rem;
+    align-items: center;
+
+    .question-bar span, .question-answers div {
+      width: 95%;
+    }
+
+    .question {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    .prize-list li, .prize-count li {
+    }
+    .tools-buttons-wrapper{
+      width: 300px;
+      font-size: 1rem;
+    }
+    .tools .currentPrize {
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import RandomOrg from 'random-org';
 
-addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
     const minValue = document.querySelector("#min");
     const maxValue = document.querySelector("#max");
     const numValue = document.querySelector("#num")
