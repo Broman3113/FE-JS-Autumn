@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>Пользователи:</div>
+<ul>
+    <li>Джон</li>
+    <li>Пит</li>
+</ul>
+<script>
+    console.log(document.body.children[1].lastChild); // Метод nextSibling == null => последний элемент не имеет ссылки на nextSibling
+    console.log(document.body.children[1].lastChild.nextSibling); // null
+
+    console.log(document.body.children[0].previousSibling); // Не всегда null, так как children - потомки-элементы, перед ними могут стоять, к примеру, текстовые узлы, не относящиеся к узлам-элементам
+
+</script>
+</body>
+</html>
