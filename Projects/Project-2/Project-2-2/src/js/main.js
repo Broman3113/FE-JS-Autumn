@@ -1,4 +1,3 @@
-
 window.addEventListener("DOMContentLoaded", () => {
     const buttons = document.querySelectorAll(".calculator-buttons button");
     const eq = document.querySelector(".calculator-display-equation span");
@@ -45,7 +44,10 @@ window.addEventListener("DOMContentLoaded", () => {
         eq.innerHTML = eq.innerHTML.slice(0, -1);
     }
     const calc = () => {
-        res.innerHTML = eval(eq.innerHTML);
+        let regEx = /(\d+)%(\d+)/g; // Matches "40%10"
+        let percentRes = eq.innerHTML.replace(regEx, (a) => (a.slice(0, a.indexOf("%")) * a.slice(a.indexOf("%") + 1)) / 100);
+
+        res.innerHTML = eval(percentRes);
     }
 
     buttons.forEach(item => {
