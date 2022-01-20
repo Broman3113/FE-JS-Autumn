@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<ol id="elem">
+    <button>Click</button>
+</ol>
+<script>
+    let button = document.querySelector("button");
+    button.addEventListener("click", () => alert("1"));
+
+    button.removeEventListener("click", () => alert("1"));
+
+    button.onclick = () => alert(2); // Выведет 1, 2, так как removeEventListener должен удалять код addEventListener, в данном примере коды идентичны, но это не один и тот же код, нужно передавать его ф-цией.
+</script>
+</body>
+</html>
