@@ -44,7 +44,7 @@ window.addEventListener("DOMContentLoaded", () => {
         eq.innerHTML = eq.innerHTML.slice(0, -1);
     }
     const calc = () => {
-        let regEx = /(\d+)%(\d+)/g; // Matches "40%10"
+        let regEx = /(\d+)%(\d+)/g; // Matches "4010%"
         let percentRes = eq.innerHTML.replace(regEx, (a) => (a.slice(0, a.indexOf("%")) * a.slice(a.indexOf("%") + 1)) / 100);
 
         res.innerHTML = eval(percentRes);

@@ -8884,7 +8884,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var random_org__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! random-org */ "./node_modules/random-org/index.js");
 /* harmony import */ var random_org__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(random_org__WEBPACK_IMPORTED_MODULE_0__);
 
-addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
   const minValue = document.querySelector("#min");
   const maxValue = document.querySelector("#max");
   const numValue = document.querySelector("#num");
